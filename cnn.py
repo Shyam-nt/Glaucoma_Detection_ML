@@ -138,11 +138,15 @@ def preprocess_image(image_path):
 def predict_glaucoma(image_path):
     preprocessed_image = preprocess_image(image_path)
     if preprocessed_image is not None:
-        predicted_class = np.argmax(cnn2.predict(X_test_cnn2), axis=1)[0]
-        return "Glaucoma" if predicted_class == 1 else "Normal"
+        predicted_class = np.argmax(cnn2.predict(preprocessed_image), axis=1)[0]
+        if predicted_class == 1:
+            return "Glaucoma"
+        else:
+            return "Normal"
     else:
         return "Error in processing image"
 
+        
 def predict_and_plot(path):
     prediction = predict_glaucoma(path)
     return prediction

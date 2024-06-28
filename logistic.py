@@ -93,6 +93,3 @@ def predict_and_plot(path):
     plt.imshow(img)
     plt.title(classes[predicted[0]])
     st.pyplot(plt.gcf())
-
-    
-    

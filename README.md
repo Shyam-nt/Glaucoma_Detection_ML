@@ -4,7 +4,7 @@ Detecting Glaucoma with Machine Learning Techniques and CNN, and Visualizing Mod
 ## Getting started
 
 # Why Virtual Environment 
-First, we create a virtual environment. "Drop virtual env def"
+First, we create a virtual environment. A virtual environment is an isolated Python environment that allows you to install packages and dependencies specific to a project without affecting the global Python installation. It helps manage project-specific dependencies efficiently.
 We might need a virtual environment for each of our project as each project might need a particular version of package or library, and using the same environment for multiple projects may lead to some features missing out on specific projects.
 
 # Creating Virtual Environment

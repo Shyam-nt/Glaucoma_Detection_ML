@@ -40,6 +40,7 @@ if rad == "Predict":
 
     if img_file is not None:
         img = Image.open(img_file)
+        img.save("img.jpg")
         img = np.array(img)
         with col2:
             st.image(img, caption="Uploaded Image", width=200)

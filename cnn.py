@@ -63,7 +63,6 @@ cnn2 = Sequential([
 ])
 
 cnn2.compile(optimizer=Adam(), loss='categorical_crossentropy', metrics=['accuracy'])
-cnn2.summary()
 
 # Train the CNN model
 hist2= cnn2.fit(X_train_cnn2, y_train_cat2, epochs=10, validation_split=0.2)

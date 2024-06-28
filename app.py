@@ -1,6 +1,6 @@
 
 import streamlit as st
-#import cnn as prd
+import cnn as prd
 import logistic as lg
 import direct_data as dd
 import cv2 as cv
@@ -52,7 +52,7 @@ if rad == "Predict":
             x_var = np.array(resized)
             x_var = x_var.reshape(-1, 290*290) / 255
             plt.imshow(img)
-            plt.title(lg.predict_and_plot("img.jpg"))
+            plt.title(prd.predict_and_plot("img.jpg"))
             st.pyplot(plt.gcf())
         else:
             st.error('The uploaded image is not a valid retinal fundus image. Please upload a valid image.')

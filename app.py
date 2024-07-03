@@ -1,6 +1,5 @@
-
 import streamlit as st
-import cnn as prd
+#import cnn as prd
 import logistic as lg
 import direct_data as dd
 import cv2 as cv
@@ -52,7 +51,7 @@ if rad == "Predict":
             x_var = np.array(resized)
             x_var = x_var.reshape(-1, 290*290) / 255
             plt.imshow(img)
-            plt.title(prd.predict_and_plot("img.jpg"))
+            plt.title(lg.predict_and_plot("img.jpg"))
             st.pyplot(plt.gcf())
         else:
             st.error('The uploaded image is not a valid retinal fundus image. Please upload a valid image.')
@@ -100,6 +99,5 @@ st.sidebar.markdown("This application uses machine learning to detect glaucoma f
 # Optional: Adding a footer
 st.markdown("""
     <style>.footer {position: fixed;left: 0;bottom: 0;width: 100%;color: white;background-color: #282932;text-align: center;padding: 10px;}
-    </style><div class="footer"><p>Created with ❤️ using Streamlit</p></div>
+    </style><div class="footer"><p>Created with ❤ using Streamlit</p></div>
     """, unsafe_allow_html=True)
-

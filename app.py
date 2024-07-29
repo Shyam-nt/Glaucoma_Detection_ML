@@ -101,3 +101,4 @@ st.markdown("""
     <style>.footer {position: fixed;left: 0;bottom: 0;width: 100%;color: white;background-color: #282932;text-align: center;padding: 10px;}
     </style><div class="footer"><p>Created with ❤️ using Streamlit</p></div>
     """, unsafe_allow_html=True)
+
